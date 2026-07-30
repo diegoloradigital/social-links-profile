@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Inter";
+  src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+  font-weight: 100 900;
+  font-style: normal;
+}
+
 :root {
   /* ----- FONT-SIZE ----- */
   --p-font-size: 0.875rem; /* <p>: 14px */
@@ -5,7 +12,7 @@
 
   /* ----- COLORS ----- */
   --main-text-color: hsl(0, 0%, 100%);
-  --location-text-color: hsl(75, 94%, 57%);
+  --accent-text-color: hsl(75, 94%, 57%);
 
   --grey-700: hsl(0, 0%, 20%);
   --grey-800: hsl(0, 0%, 12%);
@@ -21,6 +28,8 @@
 body {
   font-size: var(--p-font-size);
   background-color: var(--grey-900);
+  font-family: Inter, sans-serif;
+  font-weight: lighter;
 }
 
 main {
@@ -39,29 +48,53 @@ main {
   background-color: var(--grey-800);
   padding: 1rem;
   color: var(--main-text-color);
+  border-radius: 15px;
+  max-width: 300px;
+  width: 100%;
+
+  img {
+    border-radius: 50%;
+    max-width: 80px;
+    align-self: center;
+  }
 
   h3 {
     font-size: var(--h2-font-size);
+    font-weight: 600;
   }
 
-.location {
-    color: var(--location-text-color);
-}
+  .location {
+    color: var(--accent-text-color);
+    font-weight: 700;
+    margin-block-start: 0.4rem;
+    margin-block-end: 0.8rem;
+  }
 
   ul {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 1rem;
+    font-weight: 600;
 
     li {
       background-color: var(--grey-700);
-      padding: 0.5rem;
       border-radius: 8px;
 
       a {
         text-decoration: none;
         color: inherit;
+        padding: 0.8rem;
+        display: block;
+      }
+
+      a:hover,
+      a:focus-visible {
+        background-color: var(--accent-text-color);
+        border-radius: 8px;
+        outline: none;
+        color: var(--grey-900);
+        font-weight: 600;
       }
     }
   }
@@ -77,8 +110,18 @@ footer {
 .attribution {
   font-size: 0.6875rem; /* 11px */
   text-align: center;
+  color: var(--main-text-color);
 
   a {
-    color: hsl(228, 45%, 44%);
+    color: var(--accent-text-color);
   }
+
+  a:focus-visible {
+    outline: none;
+    border: 2px solid var(--accent-text-color);
+    border-radius: 5px;
+    padding: 0.25rem;
+    background-color: var(--grey-700);
+  }
+
 }
