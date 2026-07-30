@@ -54,7 +54,8 @@ main {
 
   img {
     border-radius: 50%;
-    max-width: 80px;
+    max-width: 100%;
+    height: auto;
     align-self: center;
   }
 
@@ -95,6 +96,9 @@ main {
         outline: none;
         color: var(--grey-900);
         font-weight: 600;
+        cursor:
+          url(./assets/images/icons8-hand-cursor.svg) 0 0,
+          auto;
       }
     }
   }
@@ -116,12 +120,15 @@ footer {
     color: var(--accent-text-color);
   }
 
+  a:hover,
   a:focus-visible {
     outline: none;
     border: 2px solid var(--accent-text-color);
     border-radius: 5px;
     padding: 0.25rem;
     background-color: var(--grey-700);
+    cursor:
+      url(./assets/images/icons8-hand-cursor.svg) 0 0,
+      auto;
   }
-
 }
