@@ -1,0 +1,84 @@
+:root {
+  /* ----- FONT-SIZE ----- */
+  --p-font-size: 0.875rem; /* <p>: 14px */
+  --h2-font-size: 1.5rem; /* <h2>: 24px*/
+
+  /* ----- COLORS ----- */
+  --main-text-color: hsl(0, 0%, 100%);
+  --location-text-color: hsl(75, 94%, 57%);
+
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--p-font-size);
+  background-color: var(--grey-900);
+}
+
+main {
+  min-height: 95vh;
+  min-height: 95dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  background-color: var(--grey-800);
+  padding: 1rem;
+  color: var(--main-text-color);
+
+  h3 {
+    font-size: var(--h2-font-size);
+  }
+
+.location {
+    color: var(--location-text-color);
+}
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    li {
+      background-color: var(--grey-700);
+      padding: 0.5rem;
+      border-radius: 8px;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+}
+
+/* ----- FOOTER ----- */
+
+footer {
+  min-height: 5vh;
+  min-height: 5dvh;
+}
+
+.attribution {
+  font-size: 0.6875rem; /* 11px */
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
